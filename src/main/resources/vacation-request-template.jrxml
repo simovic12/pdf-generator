@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ZahtjevZaGodisnjiOdmor" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04609899-4dba-4d38-9f9f-81349e28ec7b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="numberOfDays" class="java.lang.Integer"/>
+	<parameter name="startDate" class="java.util.Date"/>
+	<parameter name="endDate" class="java.util.Date"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="400" height="78" uuid="6a151e2b-bed7-444a-bd91-1995604e7fec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ZAHTJEV ZA GODIŠNJI ODMOR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="19" height="30" uuid="314c1a17-91f1-4896-955f-94d84f0645c6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="250" height="30" uuid="c869ea37-46dd-44e1-b94d-c49bfef85f54"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[molim da mi se odobri korištenje godišnjeg odmora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="60" height="30" uuid="4962fbc5-9db6-47ed-91b8-420be4388b70"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[u trajanju od ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="30" width="100" height="30" uuid="caf21494-30bb-42ae-823e-59791afc1fb9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ dana.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="19" y="0" width="251" height="30" uuid="45b26545-8479-4638-8ba6-4dfa3a3310ba"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="30" width="119" height="30" uuid="8f43fe07-1ebf-40d4-96d9-82ef9565a212"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{numberOfDays}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="187" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="110" height="30" uuid="14c5f145-a5b9-4ad3-8536-94d57f19ba63"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Godišnji odmor bi počeo ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="fb536e83-e443-4af9-9c65-094bacb4d690"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[godine, a završio bi ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="175" height="30" uuid="0f98ca4e-28be-45b6-9420-a4be6226ed69"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[(datum podnošenja zahtjeva)]]></text>
+			</staticText>
+			<textField pattern="dd.MM.yyyy.">
+				<reportElement x="0" y="110" width="174" height="30" uuid="a704dcc7-f0c2-4c67-98f8-9266b31378d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="380" y="0" width="140" height="30" uuid="7385e9db-3f14-4ab5-b66b-2773733a906c"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="110" y="0" width="170" height="30" uuid="8e2fe323-1882-4bdb-bdf4-cc74e1f4fd3f"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="179" height="54" uuid="550c2773-d203-421c-b6d3-70b9ac5a90a2"/>
+				<text><![CDATA[POTPIS DJELATNIKA:]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
